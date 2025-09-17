@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: "A demo DApp using Reown AppKit",
 };
 
-// ATTENTION!!! RootLayout must be an async function to use headers() 
+// ATTENTION!!! RootLayout must be an async function to use headers()
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -28,7 +28,7 @@ export default async function RootLayout({
 }>) {
   // Retrieve cookies from request headers on the server
   const headersObj = await headers(); // IMPORTANT: await the headers() call
-  const cookies = headersObj.get('cookie');
+  const cookies = headersObj.get("cookie");
 
   return (
     <html lang="en">

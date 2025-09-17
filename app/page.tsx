@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import { useAccount, useBalance } from 'wagmi'
-import ContractExample from '@/components/ContractExample'
+import { useAccount, useBalance } from "wagmi";
+import ContractExample from "@/components/ContractExample";
 
 export default function Home() {
-  const { address, isConnected } = useAccount()
+  const { address, isConnected } = useAccount();
   const { data: balance } = useBalance({
     address: address,
-  })
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
@@ -29,7 +29,7 @@ export default function Home() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                 Wallet Connection
               </h2>
-              
+
               {/* AppKit Button */}
               <div className="mb-8">
                 <appkit-button />
@@ -47,7 +47,8 @@ export default function Home() {
                     </p>
                     {balance && (
                       <p>
-                        <span className="font-medium">Balance:</span> {balance.formatted} {balance.symbol}
+                        <span className="font-medium">Balance:</span>{" "}
+                        {balance.formatted} {balance.symbol}
                       </p>
                     )}
                   </div>
@@ -58,7 +59,8 @@ export default function Home() {
                     Connect Your Wallet
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Click the button above to connect your wallet and start using the DApp
+                    Click the button above to connect your wallet and start
+                    using the DApp
                   </p>
                 </div>
               )}
@@ -75,8 +77,18 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  <svg
+                    className="w-6 h-6 text-blue-600 dark:text-blue-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    />
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -91,15 +103,26 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
               <div className="text-center">
                 <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <svg
+                    className="w-6 h-6 text-green-600 dark:text-green-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   Multi-Chain Support
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Support for Ethereum, Arbitrum, and other EVM-compatible networks
+                  Support for Ethereum, Arbitrum, and other EVM-compatible
+                  networks
                 </p>
               </div>
             </div>
@@ -107,15 +130,26 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-6 h-6 text-purple-600 dark:text-purple-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   Easy Integration
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Simple integration with wagmi and viem for powerful Web3 functionality
+                  Simple integration with wagmi and viem for powerful Web3
+                  functionality
                 </p>
               </div>
             </div>
